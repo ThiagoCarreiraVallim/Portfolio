@@ -1,0 +1,43 @@
+body {
+    background-color: #011627;
+    color: #F2F4F3;
+}
+
+h1 {
+    position: absolute;
+    left: 34%;
+    top: 4%;
+}
+
+header {
+    background-color: #F2F4F3;
+    border-radius: 20%;
+}
+
+#Ind {
+    color: #CA2E55;
+    font-size: 35px;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 50px;
+    border-radius: 20%;
+    min-width: 25%;
+    max-width: auto;
+    min-height: 100%;
+    max-height: auto;
+    float: right;
+    background-color:  #F2F4F3;
+}
+
+.index {
+    background-color: #CBA135;
+    color: #F2F4F3;
+    border-radius: 20%;
+}
+#cabecalho {
+    max-width:100%;
+    height: auto;
+    border: medium, black, double;
+    box-shadow: #CA2E55, 3px;
+}
