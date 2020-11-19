@@ -16,7 +16,7 @@ header {
 
 #Ind {
     color: #CA2E55;
-    font-size: 35px;
+    font-size: 25px;
     margin: auto;
     text-align: center;
     margin-top: 30px;
@@ -28,16 +28,73 @@ header {
     max-height: auto;
     float: right;
     background-color:  #F2F4F3;
+    padding: 0px;
 }
 
 .index {
     background-color: #CBA135;
+    right: 5px;;
     color: #F2F4F3;
-    border-radius: 20%;
+    text-decoration: none;
+    border-radius: 40%;
+    list-style-type: none;
+    list-style-position: inside;
+    font-size: 20px;
+    padding-right: 35px;
 }
 #cabecalho {
     max-width:100%;
     height: auto;
     border: medium, black, double;
     box-shadow: #CA2E55, 3px;
+}
+
+#corpo{
+    background-color: #F2F4F3;
+    color: #CA2E55;
+    margin-top: 30px;
+    padding-left: 220px;
+    padding-right: 220px;
+    text-align: center;
+    border-radius: 20%;
+    position: absolute;
+    font-size: 25px;
+}
+
+#mim {
+    font-size: 45px ;
+}
+
+#skill{
+    background-color: #F2F4F3;
+    color: #CA2E55;
+    position: absolute;
+    margin-top: 1150px;
+    font-size: 25px;
+    border-radius: 20%;
+    padding: 30px;
+}
+
+#habi {
+    font-size: 35px;
+    text-align: center  ;
+}
+
+#cont {
+    background-color: #F2F4F3;
+    margin-top: 1500px;
+}
+
+.ref {
+    display: inline;
+}
+
+#contato {
+    font-size: 35px;
+    color: #CA2E55;
+}
+
+a {
+    text-decoration: none;
+    color: #007EA7;
 }
