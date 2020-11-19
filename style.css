@@ -10,8 +10,16 @@ h1 {
 }
 
 header {
-    background-color: #F2F4F3;
+    background-color: #011627;
     border-radius: 20%;
+}
+
+#nome {
+    font-family: fantasy;
+}
+
+.black {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #Ind {
@@ -53,12 +61,13 @@ header {
     background-color: #F2F4F3;
     color: #CA2E55;
     margin-top: 30px;
-    padding-left: 220px;
-    padding-right: 220px;
+    padding-left: 170px;
+    padding-right: 170px;
     text-align: center;
     border-radius: 20%;
     position: absolute;
     font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #mim {
@@ -77,21 +86,26 @@ header {
 
 #habi {
     font-size: 35px;
-    text-align: center  ;
+    text-align: center;
 }
 
 #cont {
     background-color: #F2F4F3;
     margin-top: 1500px;
+    text-align: center;
 }
 
 .ref {
     display: inline;
+    margin: 15px;
+    padding-bottom: 5px;
+    font-size: 20px;
 }
 
 #contato {
     font-size: 35px;
     color: #CA2E55;
+    text-align: center;
 }
 
 a {
