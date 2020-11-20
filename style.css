@@ -1,17 +1,11 @@
+#cabecalho {
+    max-width:100%;
+    height: auto;
+}
+
 body {
-    background-color: #011627;
-    color: #F2F4F3;
-}
-
-h1 {
-    position: absolute;
-    left: 34%;
-    top: 4%;
-}
-
-header {
-    background-color: #011627;
-    border-radius: 20%;
+    background-color: #F2F4F3;
+    color: #011627;
 }
 
 #nome {
@@ -23,49 +17,31 @@ header {
 }
 
 #Ind {
-    color: #CA2E55;
-    font-size: 25px;
-    margin: auto;
-    text-align: center;
-    margin-top: 30px;
-    margin-right: 50px;
-    border-radius: 20%;
-    min-width: 25%;
-    max-width: auto;
-    min-height: 100%;
-    max-height: auto;
     float: right;
-    background-color:  #F2F4F3;
-    padding: 0px;
+    margin: 4%; 
+    background-color: #011627;
+    color: #CA2E55;
+    font-size: 2em;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 6px 4px 3px #66717E;
 }
 
 .index {
-    background-color: #CBA135;
-    right: 5px;;
-    color: #F2F4F3;
-    text-decoration: none;
-    border-radius: 40%;
-    list-style-type: none;
-    list-style-position: inside;
-    font-size: 20px;
-    padding-right: 35px;
-}
-#cabecalho {
-    max-width:100%;
-    height: auto;
-    border: medium, black, double;
-    box-shadow: #CA2E55, 3px;
+    
 }
 
 #corpo{
-    background-color: #F2F4F3;
+    background-color: #011627;
     color: #CA2E55;
-    margin-top: 30px;
-    padding-left: 170px;
-    padding-right: 170px;
+    margin-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
     text-align: center;
-    border-radius: 20%;
     position: absolute;
+    float: left;
+    box-shadow: 6px 4px 3px #66717E;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
