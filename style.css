@@ -1,0 +1,119 @@
+#cabecalho {
+    max-width:100%;
+    height: auto;
+}
+
+body {
+    background-color: #F2F4F3;
+    color: #011627;
+}
+
+#nome {
+    font-family: fantasy;
+}
+
+.black {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#Ind {
+    float: right;
+    margin: 4%; 
+    background-color: #011627;
+    color: #CA2E55;
+    font-size: 2em;
+    text-align: center;
+    padding-right: 5%;
+    box-shadow: 6px 4px 3px #66717E;
+}
+
+.index {
+    list-style-type: none;
+    margin-left: 0%;
+    text-align: left;
+}
+
+#corpo{
+    background-color: #011627;
+    color: #CA2E55;
+    margin-top: 4%;
+    padding-left: 9%;
+    padding-right: 9%;
+    text-align: center;
+    position: absolute;
+    float: left;
+    box-shadow: 6px 4px 3px #66717E;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 55%;
+}
+
+#eu{
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 5%;
+}
+
+strong#marce:hover {
+    font-family: monospace;
+    font-size: 90%;
+}
+
+#mim {
+    font-size: 55px ;
+}
+
+#skill{
+    background-color: #011627;
+    color: #CA2E55;
+    position: absolute;
+    max-width: 70%;
+    margin-top: 53%;
+    font-size: 20px;
+    padding-right: 5%;
+    padding-left: 62px;
+    text-align: left;
+    box-shadow: 6px 4px 3px #66717E;
+}
+
+#habi {
+    font-size: 35px;
+    text-align: center;
+}
+
+.hab {
+    font-family: monospace;
+    color: #007EA7;
+}
+
+#cont {
+    background-color: #011627;
+    margin-top: 68%;
+    text-align: center;
+    box-shadow: 6px 4px 3px #66717E;
+}
+
+.ref {
+    margin: 15px;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+#contato {
+    font-size: 35px;
+    color: #CA2E55;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #007EA7;
+}
+
+h3.grey:hover {
+    background-color: #7D8491;
+    color: #CA2E55;
+    width: 150%;
+    padding: 3%;
+    box-shadow: 5px 5px 3px #66717E;
+}
