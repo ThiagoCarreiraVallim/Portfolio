@@ -70,6 +70,7 @@ body {
     padding-left: 62px;
     text-align: left;
     box-shadow: 6px 4px 3px #66717E;
+
 }
 
 #habi {
@@ -87,6 +88,7 @@ body {
     margin-top: 68%;
     text-align: center;
     box-shadow: 6px 4px 3px #66717E;
+    padding: 7px;
 }
 
 .ref {
