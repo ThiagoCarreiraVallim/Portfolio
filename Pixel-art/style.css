@@ -1,15 +1,66 @@
+body {
+  background-color: #E27434;
+  cursor: cell;
+  margin: 0%;
+  font-family: monospace;
+  animation: changeHeader 7s infinite;
+}
+
+header {
+  color: whitesmoke;
+  padding: 3px 3%;
+  text-align: center;
+  margin-bottom: 1%;
+  font-size: 30px;
+  font-family: monospace;
+}
+
+.buttons {
+  font-family: monospace;
+  font-size: 12px;
+}
+
+.opBar {
+  background-color:#385588;
+  float: left;
+  width: 10%;
+  padding: 20px 0px;
+  border-radius: 2%;
+  box-shadow: 3px 4px 15px black;
+  margin-right: 2%;
+  color: whitesmoke;
+
+}
+
+.confBoard {
+  padding: 5px;
+}
+
+.options {
+  margin: auto;
+}
+
 .colorPalette {
   margin: auto;
 }
 
-.color {
-  border: black solid 1px;
-  display: inline-block;
-  padding: 35px;
+.mainBoard {
+  background-color: #385588;
+  display: flex;
+  width: 87%;
+  margin-bottom: 2%;
+  margin-right: 5px;
+  border-radius: 2%;
+  box-shadow: 3px 4px 15px black;
 }
 
 .pixelBoard {
   display: table;
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .linePixel {
@@ -20,6 +71,64 @@
   background-color: white;
   border: black solid 1px;
   display: table-cell;
-  height: 40px;
-  width: 40px;
+}
+
+.borracha {
+  background-image: url('Borracha.png');
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+}
+
+.lapis {
+  background-image: url('penPixel.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.balde {
+  background-image: url('balde.png');
+  background-size: cover;
+  width: 70px;
+  height: 70px;
+}
+
+#multColor {
+  margin: 0px 35%;
+  margin-bottom: 30px;
+}
+
+#board-size {
+  width: 60px;
+  height: 20px;
+}
+
+#clear-board {
+  display: block;
+  padding: 6px;
+  margin: auto;
+}
+
+.centerOpt {
+  margin: 3px 8px;
+}
+
+aside p {
+  margin: 0;
+  margin-top: 15px;
+}
+
+@keyframes changeHeader {
+  0% {
+    background-color: #17243b;
+  }
+  50% {
+    background-color: #000000;
+  }
+  100% {
+    background-color: #1a2944;
+  }
 }

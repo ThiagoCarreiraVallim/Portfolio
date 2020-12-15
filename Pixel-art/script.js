@@ -1,32 +1,17 @@
 window.onload = function () {
-  document.querySelector('#color1').className += ' selected';
-  document.querySelector('#color1').style.backgroundColor = 'black';
+  document.querySelector('#black').className += ' selected';
 };
 
 const pixelBoard = document.querySelector('#pixel-board');
 const colorPalette = document.querySelector('.colorPalette');
 const palette1 = document.querySelector('#color1');
-const palette2 = document.querySelector('#color2');
-const palette3 = document.querySelector('#color3');
-const palette4 = document.querySelector('#color4');
 const btnErase = document.querySelector('#clear-board');
 const numberSquare = document.querySelector('#board-size');
 const generateSquare = document.querySelector('#generate-board');
-let atualNumber = 5;
+const barde = document.querySelector('#barde');
+const paleta = document.querySelector('#multColor')
+let atualNumber = 20;
 
-function ranndomPalet() {
-  let color = 'rgb(';
-  color += `${Math.ceil(Math.random() * 255)}, `;
-  color += `${Math.ceil(Math.random() * 255)}, `;
-  color += `${Math.ceil(Math.random() * 255)})`;
-  return color;
-}
-
-function setColor() {
-  document.querySelector('#color2').style.backgroundColor = ranndomPalet();
-  document.querySelector('#color3').style.backgroundColor = ranndomPalet();
-  document.querySelector('#color4').style.backgroundColor = ranndomPalet();
-}
 
 function makeLinePixels(line, numbers) {
   for (let index = 0; index < numbers; index += 1) {
@@ -51,8 +36,8 @@ function isInside() {
   let rightSize = parseInt(numberSquare.value, 10);
   if (rightSize < 5) {
     rightSize = 5;
-  } else if (rightSize > 50) {
-    rightSize = 50;
+  } else if (rightSize > 100) {
+    rightSize = 100;
   }
   makePixels(rightSize);
 }
@@ -73,9 +58,23 @@ function setNumbersOfSquares() {
   generateSquare.addEventListener('click', reposeSquare);
 }
 
+function getColor() {
+
+}
+
 function makePixelColorized(event) {
-  const color = document.querySelector('.selected').style.backgroundColor;
+  let color = document.querySelector('.selected');
+  if (color.tagName == 'DIV') {
+    color = color.id;
+  } else {
+    color = color.value;
+  }
   event.target.style.backgroundColor = color;
+  if (color !== 'white'){
+    event.target.classList.add('colorized');
+  } else {
+    event.target.classList.remove('colorized');
+  }
 }
 
 function colorizePixels() {
@@ -83,11 +82,9 @@ function colorizePixels() {
 }
 
 function selectPalette(event) {
-  palette1.className = 'color';
-  palette2.className = 'color';
-  palette3.className = 'color';
-  palette4.className = 'color';
-  event.target.className = 'color selected';
+  const deSelected = document.querySelector('.selected')
+  deSelected.classList.remove('selected');
+  event.target.classList.add('selected');
 }
 
 
@@ -98,19 +95,30 @@ function setSelected() {
 function eraseAll() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].classList.remove('colorized');
     pixel[index].style.backgroundColor = 'white';
   }
 }
 
-function eraseScrean() {
+function eraseScreen() {
   btnErase.addEventListener('click', eraseAll);
 }
 
-makePixels(5);
-ranndomPalet();
-setColor();
+function colorizeAll() {
+  barde.addEventListener('click', function () {
+    const pixel = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      if (pixel[index].classList.contains('colorized') == false) {
+        pixel[index].style.backgroundColor = paleta.value;
+      }
+    }
+  })
+}
+
+makePixels(20);
 makePixels();
 colorizePixels();
 setSelected();
-eraseScrean();
+eraseScreen();
 setNumbersOfSquares();
+colorizeAll();

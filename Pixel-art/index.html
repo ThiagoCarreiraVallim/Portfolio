@@ -10,16 +10,26 @@
   <header>
     <h1 id="title">Paleta de Cores</h1>
   </header>
-  <section id="color-palette" class="colorPalette">
-    <div class="color" id="color1"></div>
-    <div class="color" id="color2"></div>
-    <div class="color" id="color3"></div>
-    <div class="color" id="color4"></div>
+  <aside class="opBar">
+    <section id="color-palette" class="colorPalette">
+      <div class="lapis options" id="black"></div>
+      <div class="borracha options" id="white" value="white"></div>
+      <div class="balde options" id="barde"></div>
+      <input type="color" name="selectColor" id="multColor">
+    </section>
+    <section class="confBoard">
+      <hr>
+      <button id="clear-board" class="buttons">Apagar toda a tela</button>
+      <div class="centerOpt">
+        <p>Alterar tamanho</p>
+        <input type="number" min="1" id="board-size">
+        <button id="generate-board" class="buttons">VQV</button>
+      </div>
+    </section>
+  </aside>
+  <section class="mainBoard">
+    <section id="pixel-board" class="pixelBoard">
   </section>
-  <button id="clear-board">Limpar</button>
-  <input type="number" min="1" id="board-size">
-  <button id="generate-board">VQV</button>
-  <section id="pixel-board" class="pixelBoard">
   </section>
   <script src="script.js"></script>
 </body>
