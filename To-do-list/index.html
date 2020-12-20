@@ -4,28 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="mark.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/ba164f14d7.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+  </style>
   <title>To do List</title>
 </head>
 <body>
-  <header>
-    <h1>Minha Lista de Tarefas</h1>
-    <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
-  </header>
-  <section>
-    <input type="text" name="addToDoList" id="texto-tarefa">
-    <button id="criar-tarefa">Criar tarefa</button>
-    <div id="saveList">
-      <ol id="lista-tarefas">
-      </ol>
-    </div>
-    <button id='mover-cima'>Subir tarefa</button>
-    <button id="mover-baixo">Descer tarefa</button>
-    <hr>
-    <button id="apaga-tudo">Apagar Tudo</button>
-    <button id="remover-finalizados">Remover finalizados</button>
-    <button id="remover-selecionado">Remover Selecionado</button>
-    <button id="salvar-tarefas">Salvar tarefas</button>
-  </section>
+  <div id="particles-js">
+    <main>
+      <section id="head">
+          <img src="mark.png" alt="Correct Symbol" id="markImg">
+          <h1>Minha Lista de Tarefas</h1>
+      </section>
+      <p id="funcionamento">Clique duas vezes em um item para marcá-lo como completo</p>
+      <section id="contentAll">
+        <div class="inputLine">
+          <input type="text" name="addToDoList" id="texto-tarefa" placeholder="Adicione uma tarefa">
+          <button class="buttons makeTask" id="criar-tarefa">Criar tarefa </button>
+        </div>
+        <div class="contentList">
+          <aside id="asideButtons">
+            <button class="buttons positionChange" id='mover-cima'><i class="fas fa-arrow-up"></i></button>
+            <button class="buttons positionChange" id="mover-baixo"><i class="fas fa-arrow-down"></i></button>
+            <button class="buttons sideButtons" id="apaga-tudo">Apagar Tudo</button>
+            <button class="buttons sideButtons" id="remover-finalizados">Remover finalizados</button>
+            <button class="buttons sideButtons" id="remover-selecionado">Remover Selecionado</button>
+            <button class="buttons sideButtons" id="salvar-tarefas">Salvar tarefas</button>
+          </aside>
+          <div id="saveList">
+            <ol id="lista-tarefas">
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
