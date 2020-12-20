@@ -1,7 +1,154 @@
+* {
+  margin: 0;
+}
+
+main {
+  margin-top: 30px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.94);
+  border-radius: 10%;
+  font-family: 'Comfortaa', cursive;
+}
+
+p {
+  color: grey;
+}
+
+h1 {
+  width: auto;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0;
+  outline: 0;
+}
+
+#markImg {
+  width: 80px;
+  float: left;
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+#saveList {
+  width: auto;
+  margin: 7% auto 10px 6%;
+  word-wrap: break-word;
+  text-align: left;
+}
+
 .completed {
   text-decoration: line-through;
 }
 
 .selected {
-  background-color: gray;
+  background-color: rgb(87, 87, 212);
+}
+
+.buttons {
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  font-family: 'Comfortaa', cursive;
+  transition: 300ms;
+}
+
+#particles-js {
+  background-color: rgb(36, 36, 136);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#asideButtons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contentAll {
+  width: 85%;
+}
+
+.contentList {
+  display: inline-flex;
+  width: 100%;
+}
+
+.positionChange{
+  width: 50px;
+  margin: 0 auto;
+  background-color: rgb(68, 68, 179);
+  border: 0px;
+  transition: 300ms;
+}
+
+i {
+  color: white;
+}
+
+.positionChange:hover {
+  transform: scale(1.1);
+  background-color: rgb(29, 29, 126);
+}
+
+#mover-baixo {
+  margin-bottom: 15px;
+}
+
+.task {
+  user-select: none;
+  transition: 300ms;
+  line-height: 25px;
+  padding-right: 5px;
+}
+
+.sideButtons {
+  background-color: transparent;
+  border: 0;
+}
+
+#texto-tarefa {
+  width: 45%;
+  border: none;
+  height: 38px;
+  font-size: 16px;
+}
+
+.makeTask {
+  border: none;
+  background-color: white;
+  transition: 300ms;
+}
+
+.buttons:hover {
+  background-color: rgb(29, 29, 126);
+  color: white;
+  transform: scale(1.1);
+}
+
+.inputLine {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.fas.fa-check-circle {
+  color: rgb(41, 168, 41);
+  margin-left: 5px;
 }

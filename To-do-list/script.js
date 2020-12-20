@@ -18,39 +18,64 @@ function presetList() {
         beforeLi.innerText = atual[0];
         beforeLi.className = atual[1];
         taskList.appendChild(beforeLi);
+        if (beforeLi.classList.contains('completed')) {
+          const newIcon = document.createElement('i');
+          newIcon.className = 'fas fa-check-circle';
+          beforeLi.appendChild(newIcon);
+        }
       }
     }
   }
 }
 
-function createList() {
+function createList(event) {
   const inputTask = document.querySelector('#texto-tarefa');
-  const creatLi = document.createElement('li');
-  creatLi.innerText = inputTask.value;
-  creatLi.className = 'task';
-  taskList.appendChild(creatLi);
-  inputTask.value = '';
+  const key = event.keyCode
+  if (inputTask.value !== '') {
+    if (key == 13 || event.target.id === 'criar-tarefa') {
+      const creatLi = document.createElement('li');
+      creatLi.innerText = inputTask.value;
+      creatLi.className = 'task';
+      taskList.appendChild(creatLi);
+      inputTask.value = '';
+    }
+  }
 }
 
 function addListButton() {
+  const inputText = document.querySelector('#texto-tarefa');
   btnTask.addEventListener('click', createList);
+  inputText.addEventListener('keyup', createList);
 }
 
 function selectTask(event) {
-  const listOfTasks = document.querySelector('.selected');
-  if (listOfTasks !== null) {
-    listOfTasks.classList.remove('selected');
+  if (event.target.id !== 'lista-tarefas'){
+    const listOfTasks = document.querySelector('.selected');
+    if (listOfTasks !== null) {
+      listOfTasks.classList.remove('selected');
+    }
+    event.target.classList.toggle('selected');
   }
-  event.target.classList.toggle('selected');
 }
 
 function completedTask(event) {
-  event.target.classList.toggle('completed');
+  const listTask = document.querySelectorAll('.task i');
+  const icon = document.createElement('i');
+  icon.className = 'fas fa-check-circle'
+  const i = event.target.children
+  if (event.target.id !== 'lista-tarefas'){
+    event.target.classList.toggle('completed');
+    if (event.target.children.length > 0) {
+      event.target.removeChild(i[0]);
+    } else {
+      event.target.appendChild(icon);
+    }
+  }
 }
 
 function creatSelectTask() {
-  taskList.addEventListener('click', selectTask);
-  taskList.addEventListener('dblclick', completedTask);
+    taskList.addEventListener('click', selectTask);
+    taskList.addEventListener('dblclick', completedTask);
 }
 
 function deleteAll() {
@@ -64,17 +89,16 @@ function deleteAll() {
 
 function removeCompleted() {
   btnDelComplete.addEventListener('click', function () {
-    localStorage.clear();
     const listOfComplete = document.querySelectorAll('.completed');
     for (let index = 0; index < listOfComplete.length; index += 1) {
       taskList.removeChild(listOfComplete[index]);
     }
-    storageList();
   });
 }
 
 function storageList() {
   const list = document.querySelectorAll('.task');
+  localStorage.clear();
   for (let index = 0; index < list.length; index += 1) {
     const arrayList = [];
     arrayList.push(list[index].innerText);
@@ -100,11 +124,11 @@ function pickIndex(classItem) {
 
 function changeIndex(newIndex, event, newPosition) {
   const numberOfPos = document.querySelectorAll('.task');
-  if (newIndex > 0 && event.target.id === 'mover-cima') {
+  if (newIndex > 0 && event.currentTarget.id === 'mover-cima') {
     taskList.removeChild(numberOfPos[newIndex]);
     taskList.insertBefore(newPosition, numberOfPos[newIndex - 1]);
   }
-  if (newIndex < numberOfPos.length && event.target.id === 'mover-baixo') {
+  if (newIndex < numberOfPos.length && event.currentTarget.id === 'mover-baixo') {
     taskList.removeChild(numberOfPos[newIndex]);
     taskList.insertBefore(newPosition, numberOfPos[newIndex + 2]);
   }
@@ -130,9 +154,7 @@ function removeSelected() {
     const numberOfPos = document.querySelectorAll('.task');
     const ind = pickIndex('selected');
     if (ind !== undefined) {
-      localStorage.clear();
       taskList.removeChild(numberOfPos[ind]);
-      storageList();
     }
   });
 }
