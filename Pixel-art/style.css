@@ -68,7 +68,7 @@ header {
 }
 
 .pixel {
-  background-color: white;
+  background-color: #f8f8ff;
   border: black solid 1px;
   display: table-cell;
 }
